@@ -1,8 +1,8 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) {//mengecek status sesi sesion status session none tanda sesi belum berjalan, sesion strt memulai sesi php
     session_start();
 }
-$currentPage = basename($_SERVER['PHP_SELF']);
+$currentPage = basename($_SERVER['PHP_SELF']);//mengambil nama file dari URL saat ini menggunakan variabel superglobal $_SERVER['PHP_SELF'] dan fungsi basename(). Nama file ini disimpan dalam variabel $currentPage untuk digunakan dalam logika navigasi, misalnya untuk menyoroti tautan menu yang sesuai dengan halaman saat ini.
 ?>
 <nav class="navbar">
     <div class="nav-container">
@@ -11,7 +11,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <?php if (isset($_SESSION['username'])): ?>
             <ul class="nav-menu">
                 <li>
-                    <a href="rekap_presensi.php" class="<?= $currentPage === 'rekap_presensi.php' ? 'active' : '' ?>">
+                    <a href="rekap_presensi.php" class="<?= $currentPage === 'rekap_presensi.php' ? 'active' : ''?>">
                         Rekap Presensi
                     </a>
                 </li>
@@ -36,7 +36,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 <span>Admin: <strong><?= htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8') ?></strong></span>
                 <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
             </div>
-        <?php endif; ?>
+        <?php endif;?>
     </div>
 </nav>
 <main class="container">
