@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Asia/Makassar');
 class Database {
     private string $host = 'localhost';//string untuk mencegah kesalahannya menurut saya biar 
     //tidak ke database supaya tidak di kira program data database jadi di ubah ke tipe data string
