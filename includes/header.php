@@ -1,6 +1,6 @@
 <?php
-if(session_status() === PHP_SESSION_NONE) {
-    session_start();
+if(session_status() === PHP_SESSION_NONE) {//mengecek status sesi sesion status session none tanda sesi belum berjalan, sesion strt memulai sesi php
+    session_start();//mengecek status sesi sesion status session none tanda sesi belum berjalan, sesion strt memulai sesi php
 }
 $pageTitle =$pageTitle ?? 'Aplikasi Absensi Siswa';//??jika kosong, pkai yang di sebelah kanan
 ?>
