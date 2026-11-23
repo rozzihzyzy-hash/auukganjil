@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Makassar');
+date_default_timezone_set('Asia/Makassar');//<--;	Mengatur zona waktu PHP ke WITA (Samarinda) agar fungsi date() di PHP sama dengan jam database.
 class Database {
     private string $host = 'localhost';//string untuk mencegah kesalahannya menurut saya biar 
     //tidak ke database supaya tidak di kira program data database jadi di ubah ke tipe data string
@@ -7,7 +7,7 @@ class Database {
     private string $username = 'root';
     private string $password = '';
     private ?PDO $conn = null;
-
+// Tiga variabel properti untuk menyimpan nama database (auukganjil), akun bawaan Laragon/XAMPP (root), dan sandi kosong ('').
     public function __construct()
     {
         try{
